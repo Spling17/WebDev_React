@@ -11,14 +11,15 @@ const studentList = [
 ]
 
 export default class ChallengeTwo extends Component {
-  constructor(){
-    super()
-    this.timer = null
-  }
+  // constructor(){
+  //   super()
+  //   this.timer = null
+  // }
+  
   //declare the states
   state = {
     arr: [],
-    isLoading: false
+    // isLoading: false
   }
 
   //componentDidMount will execute when the page has loaded (this will only run once)
@@ -58,11 +59,24 @@ export default class ChallengeTwo extends Component {
   // }
 
   //random button handler
-  randomize = () => {
-    //shuffle the array and set the state
-    const newArr = this.shuffle(this.state.arr)
-    this.setState({ arr: [...newArr] })
-  }
+  // randomize = () => {
+  //   //shuffle the array and set the state
+  //   const newArr = this.shuffle(this.state.arr)
+  //   this.setState({ arr: [...newArr] })
+  // }
+
+  randomize = (array) => {
+    let currentIndex = array.length,  randomIndex;
+    const newArr = [...array]
+  
+    while (currentIndex != 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+      
+      [newArr[currentIndex], newArr[randomIndex]] = [newArr[randomIndex], newArr[currentIndex]];
+    }
+    this.setState({arr: newArr})
+    }
 
   render() {
 

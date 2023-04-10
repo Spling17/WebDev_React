@@ -4,18 +4,24 @@ import LookLeft from '../assets/look-left.jpeg'
 import LookRight from '../assets/look-right.jpeg'
 
 class ChallengeOne extends Component {
-  constructor(){
-    super()
-    this.btnClickHandler = this.btnClickHandler.bind(this)
-  }
+  // constructor(){
+  //   super()
+  //   this.btnClickHandler = this.btnClickHandler.bind(this)
+  // }
+
   //declare the state here
   state = {
-    lookLeft: undefined
+    // lookLeft: undefined
+    img:LookLeft
   };
 
   //click left/right button handler goes here
   btnClickHandler(arg){
-    this.setState({ lookLeft: arg })
+    this.setState({ img:LookRight })
+  }
+
+  btnClickHandler(arg){
+    this.setState({ img:LookLeft })
   }
 
   render() {
