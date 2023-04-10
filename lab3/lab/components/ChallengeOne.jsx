@@ -16,11 +16,11 @@ class ChallengeOne extends Component {
   };
 
   //click left/right button handler goes here
-  btnClickHandler(arg){
+  btnClickHandler(){
     this.setState({ img:LookRight })
   }
 
-  btnClickHandler(arg){
+  btnClickHandler(){
     this.setState({ img:LookLeft })
   }
 
