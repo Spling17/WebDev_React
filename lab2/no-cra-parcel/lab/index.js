@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import SnsInfo from './components/SnsInfo'
 
 // class App extends React.Component {
 //     render(){
@@ -10,7 +11,11 @@ import ReactDOM from 'react-dom'
 // }
 
 const App = () => {
-    
+    return (    
+        <>
+          <SnsInfo />
+        </>
+    )
 }
 
 const rootNode = document.getElementById('root')
