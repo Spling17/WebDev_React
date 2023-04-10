@@ -6,13 +6,6 @@ import ChallengeTwo from './components/ChallengeTwo'
 
 class App extends React.Component {
 
-  // state = {
-  //   hide: false
-  // }
-
-  // toggle = () => {
-  //   this.setState({ hide: !this.state.hide })
-  // }
 
   render() {
     return (
